@@ -11,14 +11,11 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 mongoose
-  .connect(
-    "mongodb+srv://ikreza:hunkypunky@onlineshop-netua.mongodb.net/test?retryWrites=true&w=majority",
-    {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-    }
-  )
+  .connect(process.env.uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
   .then(() => {
     console.log("DB connected");
   })
