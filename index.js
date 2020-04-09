@@ -11,7 +11,7 @@ const server = http.createServer(app);
 const io = socketIo(server);
 
 mongoose
-  .connect(process.env.uri, {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/my-pokemon-chat", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
