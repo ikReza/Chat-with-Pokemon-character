@@ -55,7 +55,6 @@ const userRoute = require("./routes/user-route");
 app.use(cors());
 app.use(express.json());
 app.use("/user", userRoute);
-app.use("/message", require("./routes/message-route"));
 
 const port = process.env.PORT || 4001;
 
