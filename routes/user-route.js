@@ -10,6 +10,10 @@ const {
   loginValidation,
 } = require("../validation/userValidation");
 
+router.get("/", (req, res) => {
+  res.send("Pokemon Chat");
+});
+
 router.post("/register", async (req, res) => {
   //check if data is valid
   const { error } = registerValidation(req.body);
