@@ -10,15 +10,6 @@ const {
   loginValidation,
 } = require("../validation/userValidation");
 
-router.get("/", async (req, res) => {
-  try {
-    const existingUser = await User.find();
-    res.status(200).send(existingUser);
-  } catch (err) {
-    res.status(400).json({ message: err });
-  }
-});
-
 router.post("/register", async (req, res) => {
   //check if data is valid
   const { error } = registerValidation(req.body);
