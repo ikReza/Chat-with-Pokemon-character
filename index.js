@@ -4,6 +4,7 @@ const socketIo = require("socket.io");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
+const userRoute = require("./routes/user-route");
 
 //socket setup
 const app = express();
@@ -53,8 +54,6 @@ io.on("connection", (socket) => {
     }
   });
 });
-
-const userRoute = require("./routes/user-route");
 
 //app.get("/favicon.ico", (req, res) => res.status(204));
 
