@@ -27,6 +27,7 @@ mongoose
 app.use(cors());
 app.use(express.json());
 app.use("/user", userRoute);
+app.get("/favicon.ico", (req, res) => res.status(204));
 
 let user = [];
 
@@ -54,8 +55,6 @@ io.on("connection", (socket) => {
     }
   });
 });
-
-//app.get("/favicon.ico", (req, res) => res.status(204));
 
 const port = process.env.PORT || 4001;
 
