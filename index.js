@@ -26,7 +26,7 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
-app.use("/user", userRoute);
+app.use("/", userRoute);
 app.get("/favicon.ico", (req, res) => res.status(204));
 
 let user = [];
