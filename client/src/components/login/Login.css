@@ -1,0 +1,9 @@
+body {
+  padding: 0;
+  background: url("bg-1.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100%;
+}

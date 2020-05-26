@@ -1,0 +1,19 @@
+.chatAvatar {
+  margin-right: 2%;
+}
+
+.chatTypo {
+  flex-grow: 5.5;
+}
+
+.chatPaper {
+  padding: 20;
+}
+
+.homeBtn {
+  flex-grow: 0.5;
+}
+
+.nameBtn {
+  flex-grow: 5;
+}
